@@ -23,9 +23,30 @@ public class Main {
         //Precio de valor especifico
         System.out.println("\nProducto del arroz " + productos.get("Arroz"));
 
-        //Producto más caro y más barato
-        System.out.println("\nproducto más barato " + productos.firstEntry());
-        System.out.println("\nProducto más caro " + productos.lastEntry());
+        Double maxDouble = Double.MIN_VALUE;
+        Double minDouble = Double.MAX_VALUE;
+        String minKey = null;
+        String maxKey = null;
+
+        for (Map.Entry<String, Double> value : productos.entrySet()){
+                String llave = value.getKey();
+                Double valor = value.getValue();
+
+                if (valor > maxDouble){
+                    maxDouble= valor;
+                    maxKey = llave;
+                }
+
+                if (valor < minDouble){
+                    minDouble = valor;
+                    minKey = llave;
+                }
+
+        }
+
+       // Imprimir los valores máximo y mínimo
+        System.out.println("Producto más caro: " + maxDouble + ", Clave: " + maxKey);
+        System.out.println("Producto más barato: " + minDouble + ", Clave: " + minKey);
 
         //Orden alfabetico
         for (Map.Entry<String, Double> producto : productos.entrySet()){

@@ -47,9 +47,9 @@ public class Main {
         }
 
 
-        // Imprimir los valores máximo y mínimo
-        System.out.println("Ciudad más calida: " + maxValue + ", Clave: " + maxKey);
-        System.out.println("ciudad más fria: " + minValue + ", Clave: " + minKey);
+            // Imprimir los valores máximo y mínimo
+            System.out.println("Ciudad más calida: " + maxValue + ", Clave: " + maxKey);
+            System.out.println("ciudad más fria: " + minValue + ", Clave: " + minKey);
 
         //Imprimir las ciudades en orden alfabetico
         for (Map.Entry<String, Double> ciudad : ciudades.entrySet()){
